@@ -17,6 +17,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "12.18.3"
+  },
   "dependencies": {
     "apollo-server-express": "^2.18.2",
     "if-env": "^1.0.4",
