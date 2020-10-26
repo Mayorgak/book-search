@@ -3,6 +3,7 @@ const express = require('express');
 const { ApolloServer } = require("apollo-server-express");
 const path = require('path');
 const routes = require('./routes');
+const mongoose = require("mongoose");
 
 // import our typeDefs and resolvers
 const { typeDefs, resolvers } = require('./schemas');
