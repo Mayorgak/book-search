@@ -11,7 +11,7 @@ const db = require('./config/connection');
 
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/deep-thoughts",
+  process.env.MONGODB_URI || "mongodb://localhost/book-search",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
