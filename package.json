@@ -22,8 +22,10 @@
   },
   "dependencies": {
     "apollo-server-express": "^2.18.2",
+    "bootstrap": "^4.5.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.10.10"
+    "mongoose": "^5.10.10",
+    "react-bootstrap": "^1.4.0"
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
