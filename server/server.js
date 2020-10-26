@@ -10,22 +10,13 @@ const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/book-search",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  }
-);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
 
-// const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 // create a new Apollo server and pass in our schema data
 const server = new ApolloServer({
