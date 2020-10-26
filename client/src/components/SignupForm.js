@@ -16,7 +16,6 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-
     //add mutation function from resolvers
   const [addUser] = useMutation(ADD_USER);
 
@@ -28,34 +27,26 @@ const SignupForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // check if form has everything (as per react-bootstrap docs)
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
 
    try {
  
 
      const { data } = await addUser({
-       variables: {
-        
-         ...userFormData,
-       },
+       variables: {...userFormData}
      });
    
-
      Auth.login(data.addUser.token);
    } catch (err) {
      setShowAlert(true);
+     console.log(err)
    }
-    setUserFormData({
-      username: '',
-      email: '',
-      password: '',
-    });
   };
+  //   setUserFormData({
+  //     username: '',
+  //     email: '',
+  //     password: '',
+  //   });
+  // };
 
   return (
     <>
