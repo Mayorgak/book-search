@@ -24,12 +24,11 @@ const SignupForm = () => {
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = async event => {
     event.preventDefault();
 
 
    try {
- 
 
      const { data } = await addUser({
        variables: {...userFormData}
